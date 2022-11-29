@@ -11,7 +11,7 @@ from config import settings
 core_router = APIRouter()
 
 
-@app.post('/cp_visited')
+@core_router.post('/cp_visited')
 async def proposal_visited(request: Request):
     '''
     Отправка уведомления о посещении клиентом КП
@@ -22,7 +22,7 @@ async def proposal_visited(request: Request):
     await bot.send_message(settings.core_group, f'Клиент {data["email"]} посетил страницу с КП')
 
 
-@app.post('/new_client')
+@core_router.post('/new_client')
 async def new_client(request: Request):
     '''
     Отправка уведомлений о новом клиенте по всем каналам связи и отправка письма с КП
