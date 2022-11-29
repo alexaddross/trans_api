@@ -3,6 +3,6 @@ version: '3.7'
 services:
   web:
     build: .
-    command: python3.10 uvicorn core:app --reload --host 0.0.0.0 --port 443 --ssl-keyfile=certs/key.pem --ssl-certfile=certs/cert.pem
+    command: python3.10 -m uvicorn core:app --reload --host 0.0.0.0 --port 443 --ssl-keyfile=certs/key.pem --ssl-certfile=certs/cert.pem
     ports:
       - 443:443
