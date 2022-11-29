@@ -12,6 +12,8 @@ from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
 from email.mime.multipart import MIMEMultipart
 
+from fastapi.responses import JSONResponse
+
 
 async def send_mail(data):
     '''
